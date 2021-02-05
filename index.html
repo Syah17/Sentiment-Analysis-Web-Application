@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Visualization of Twitter Sentiment Analysis Data (VTSAD)</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='style/sentiment-analysis.css'>
+	<link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/logo+twitter+twitter+logo+icon-1320195954955224762.png" type="png">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>   
+</head>
+<body>
+    <main>
+		<br><button onclick="myFunction()">Dark Mode</button>
+		<button onclick="myFunction1()">Twitter Mode</button>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 text-center">
+					<h1 style="color:grey; font-weight: bold">Visualization of Twitter Sentiment Analysis Data</h1>
+                </div>
+				<img src="https://assets.teenvogue.com/photos/56b4f21327a088e24b967bb6/3:2/w_531,h_354,c_limit/twitter-gifs.gif" alt="birdy" width="200" height="100" class="center">
+            </div>
+            <div class="row text-center"style="color:grey; font-weight: bold">
+                <div class="col-12 info-text">
+                    Please enter your hashtag/keyword to search and visualize.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <input data-intro="Type Here" data-position="right" type="text" id="tag-input" style="color:orange" placeholder="# Type Here">
+                    <button class="btn btn-warning btn-search" style="width:90px; height:50px">
+                        Search
+                    </button>
+                </div>
+            </div>
+			<br>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="spinner-border text-danger d-none" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+				<br>
+				<div class="col-12 col-md-6">
+                    <div id="chartContainer1"></div> 
+                </div>
+                <div class="col-12 col-md-6">
+                    <div id="chartContainer"></div>
+                </div>
+<!--                 <div class="col-12 col-md-6">
+                    <div id="chartContainer2"></div>
+                </div>
+ -->            <br>
+                <br>
+                <div class="col-12 col-md-6 text-center">
+                    <div id="tweet-list" class="text-left d-none">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="positive-tab" data-toggle="tab" href="#positive" role="tab" aria-controls="positive" aria-selected="true">
+                                Positive <span id="positive-counter"></span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="neutral-tab" data-toggle="tab" href="#neutral" role="tab" aria-controls="neutral" aria-selected="false">
+                                Neutral <span id="neutral-counter"></span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="negative-tab" data-toggle="tab" href="#negative" role="tab" aria-controls="negative" aria-selected="false">
+                                Negative <span id="negative-counter"></span>
+                              </a>
+                            </li>
+                        </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane fade show active" id="positive" role="tabpanel" aria-labelledby="positive-tab"></div>
+                            <div class="tab-pane fade" id="neutral" role="tabpanel" aria-labelledby="neutral-tab"></div>
+                            <div class="tab-pane fade" id="negative" role="tabpanel" aria-labelledby="negative-tab"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/canvasjs.min.js"></script>
+    <script src='js/sentiment-analysis.js'></script>
+    <script src="js/1canvasjs.min.js"></script>
+</body>
+</html>
