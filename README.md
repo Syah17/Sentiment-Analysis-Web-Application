@@ -1,6 +1,9 @@
 # Sentiment-Analysis-Web-Application
 
-Clone to your local Machine
+1. Make sure you already have Composer and Laravel
 
-Using Xampp put root file on the htdoc file
-Click Index redirect to web application
+2. Clone to your local Machine
+
+3. Using Xampp put root file on the htdoc file
+
+4. Open composer and type "php artisan serve"
